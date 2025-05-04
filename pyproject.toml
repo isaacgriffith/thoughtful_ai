@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thoughtful_sort"
+version = "0.1.0"
+description = "A package for categorizing packages based on their dimensions and mass"
+requires-python = ">=3.6"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = []
+
+[project.scripts]
+thoughtful-sort = "thoughtful_sort.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["thoughtful_sort/test"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--verbose --tb=short --color=yes"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S" 
